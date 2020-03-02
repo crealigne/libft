@@ -6,12 +6,13 @@
 /*   By: nabbassi <nabbassi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/25 16:10:29 by nabbassi          #+#    #+#             */
-/*   Updated: 2020/03/02 18:38:36 by nabbassi         ###   ########.fr       */
+/*   Updated: 2020/03/02 20:50:25 by nabbassi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// coucou
 int		ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	unsigned char	*ps1;
