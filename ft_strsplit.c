@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nabbassi <nabbassi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nklarsfe <nklarsfe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/28 16:46:11 by nabbassi          #+#    #+#             */
-/*   Updated: 2020/03/02 18:28:01 by nabbassi         ###   ########.fr       */
+/*   Updated: 2020/03/03 17:40:45 by nklarsfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ static int	words(char const *s, char c)
 	int		mots;
 	int		i;
 
+	if(!s)
+		return (0);
 	mots = 0;
 	i = 0;
 	while (s[i])
@@ -39,6 +41,8 @@ static void	remplir_tableau(char **answer, char const *s, char c)
 
 	i = 0;
 	index_mot = -1;
+	if (!s)
+		return ;
 	while (s[i])
 	{
 		if (s[i] != c && (i == 0 || s[i - 1] == c))
@@ -70,11 +74,15 @@ char		**ft_strsplit(char const *s, char c)
 }
 
 /*
-** int (void)main()
-**
-** {
-** char s1[] = "bonjour caff vad";
-** printf("%s\n", *ft_strsplit(s1, 'a'));
-** return(0);
+** int main(){
+**	char *s1 = NULL;
+**	char **yo = ft_strsplit(s1, ' ');
+**	int i=0;
+**	while(yo[i]){
+**		printf("%s\n", yo[i]);
+**		++i;
+**	}
+**	return(0);
 ** }
 */
+
