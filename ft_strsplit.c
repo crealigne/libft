@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nklarsfe <nklarsfe@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nabbassi <nabbassi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/28 16:46:11 by nabbassi          #+#    #+#             */
-/*   Updated: 2020/03/03 17:40:45 by nklarsfe         ###   ########.fr       */
+/*   Created: 2020/03/04 16:50:07 by nabbassi          #+#    #+#             */
+/*   Updated: 2020/03/04 16:54:25 by nabbassi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static int	words(char const *s, char c)
 	int		mots;
 	int		i;
 
-	if(!s)
+	if (!s)
 		return (0);
 	mots = 0;
 	i = 0;
@@ -85,4 +85,3 @@ char		**ft_strsplit(char const *s, char c)
 **	return(0);
 ** }
 */
-
