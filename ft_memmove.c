@@ -6,7 +6,7 @@
 /*   By: nabbassi <nabbassi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/23 21:06:07 by nabbassi          #+#    #+#             */
-/*   Updated: 2020/03/04 16:56:45 by nabbassi         ###   ########.fr       */
+/*   Updated: 2020/03/04 18:56:24 by nabbassi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	i = 0;
 	a = (unsigned char *)dst;
 	b = (unsigned char *)src;
+	if ((!dst && !src) || len < 0)
+		return (NULL);
 	if (a > b)
 		while (i < len)
 		{

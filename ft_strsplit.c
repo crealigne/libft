@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nabbassi <nabbassi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nabbassi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/04 16:50:07 by nabbassi          #+#    #+#             */
-/*   Updated: 2020/03/04 16:54:25 by nabbassi         ###   ########.fr       */
+/*   Created: 2020/03/04 19:20:52 by nabbassi          #+#    #+#             */
+/*   Updated: 2020/03/04 19:21:05 by nabbassi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,11 @@ char		**ft_strsplit(char const *s, char c)
 	char	**answer;
 
 	nombre_de_mots = words(s, c);
+	if (!s)
+		return (NULL);
 	answer = malloc((nombre_de_mots + 1) * sizeof(char *));
+	if (answer == NULL)
+		return (NULL);
 	answer[nombre_de_mots] = NULL;
 	remplir_tableau(answer, s, c);
 	return (answer);

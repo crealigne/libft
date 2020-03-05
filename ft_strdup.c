@@ -6,7 +6,7 @@
 /*   By: nabbassi <nabbassi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/20 18:04:18 by nabbassi          #+#    #+#             */
-/*   Updated: 2020/03/04 16:55:01 by nabbassi         ###   ########.fr       */
+/*   Updated: 2020/03/04 19:08:56 by nabbassi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ char	*ft_strdup(const char *s)
 		i++;
 	}
 	dest = (char*)malloc(sizeof(*dest) * (i + 1));
+	if (dest == NULL)
+		return (NULL);
 	while (j < i)
 	{
 		dest[j] = s[j];
